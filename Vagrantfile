@@ -8,10 +8,10 @@
 Vagrant.configure("2") do |config|
  
   config.vm.define "kubmaster" do |kub|
-    kub.vm.box = "ubuntu/trusty64"
+    kub.vm.box = "alvistack/devel-22.04"
     kub.vm.hostname = "kubmaster"
     kub.vm.provision "docker"
-    kub.vm.box_url = "ubuntu/trusty64"
+    kub.vm.box_url = "alvistack/devel-22.04"
 
     kub.vm.network :private_network, ip: "192.168.56.101"
 
@@ -24,10 +24,10 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "kubnode" do |kubnode|
-    kubnode.vm.box = "ubuntu/trusty64"
+    kubnode.vm.box = "alvistack/devel-22.04"
     kubnode.vm.hostname = "kubnode"
     kubnode.vm.provision "docker"
-    kubnode.vm.box_url = "ubuntu/trusty64"
+    kubnode.vm.box_url = "alvistack/devel-22.04"
 
     kubnode.vm.network :private_network, ip: "192.168.56.102"
 
